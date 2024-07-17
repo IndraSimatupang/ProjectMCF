@@ -1,0 +1,18 @@
+﻿@model IEnumerable<ViewModel.ListValue>
+
+<select id="list-page-ctrl" class="custom-select">
+    @foreach (var item in @Model)
+    {
+        <option id="@item.Value" value="@item.Value">@item.Value</option>
+    }
+</select>
+
+<script>
+    $(document).ready(function(){
+        $('#list-page-ctrl').val(rowsPerpage)
+    })
+
+    $('#list-page-ctrl').on('change', function(){
+        GetList(currentPage, $(this).val(), currentSearch, currentcolumn, currentascen);
+    })
+</script>

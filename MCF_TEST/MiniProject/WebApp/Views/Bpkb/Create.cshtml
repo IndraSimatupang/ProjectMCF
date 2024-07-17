@@ -1,0 +1,46 @@
+﻿@model BpkbViewModel
+
+<form asp-action="Create" method="post">
+    <div>
+        <label asp-for="Bpkb.AgreementNumber"></label>
+        <input asp-for="Bpkb.AgreementNumber" />
+    </div>
+    <div>
+        <label asp-for="Bpkb.BpkbNo"></label>
+        <input asp-for="Bpkb.BpkbNo" />
+    </div>
+    <div>
+        <label asp-for="Bpkb.BranchId"></label>
+        <input asp-for="Bpkb.BranchId" />
+    </div>
+    <div>
+        <label asp-for="Bpkb.BpkbDate"></label>
+        <input asp-for="Bpkb.BpkbDate" type="datetime-local" />
+    </div>
+    <div>
+        <label asp-for="Bpkb.FakturNo"></label>
+        <input asp-for="Bpkb.FakturNo" />
+    </div>
+    <div>
+        <label asp-for="Bpkb.FakturDate"></label>
+        <input asp-for="Bpkb.FakturDate" type="datetime-local" />
+    </div>
+    <div>
+        <label asp-for="Bpkb.LocationId"></label>
+        <select asp-for="Bpkb.LocationId">
+            @foreach (var location in Model.StorageLocations)
+            {
+                <option value="@location.LocationId">@location.LocationName</option>
+            }
+        </select>
+    </div>
+    <div>
+        <label asp-for="Bpkb.PoliceNo"></label>
+        <input asp-for="Bpkb.PoliceNo" />
+    </div>
+    <div>
+        <label asp-for="Bpkb.BpkbDateIn"></label>
+        <input asp-for="Bpkb.BpkbDateIn" type="datetime-local" />
+    </div>
+    <button type="submit">Save</button>
+</form>

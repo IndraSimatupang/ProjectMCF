@@ -1,0 +1,162 @@
+﻿@{
+    ViewData["Title"] = "OTP Terkirim";
+}
+
+<h1 class="text-center">@ViewData["Title"]</h1>
+
+<div class="container height-100 d-flex justify-content-center align-items-center">
+    <div class="position-relative">
+        <div class="card p-2 text-center">
+            <h6>Masukkan OTP untuk verifikasi</h6>
+            <div> <span>OTP telah dikirimkan ke: </span> <small> @ViewData["Receipter"]</small> </div>
+            <div id="otp" class="inputs d-flex flex-row justify-content-center mt-2">
+                <input class="m-2 text-center form-control rounded" type="text" id="first" maxlength="1" />
+                <input class="m-2 text-center form-control rounded" type="text" id="second" maxlength="1" />
+                <input class="m-2 text-center form-control rounded" type="text" id="third" maxlength="1" />
+                <input class="m-2 text-center form-control rounded" type="text" id="fourth" maxlength="1" />
+            </div> <div class="mt-4">
+                <button class="btn btn-primary px-4 validate" id="btn-cnfrm">Konfirmasi OTP</button>
+            </div>
+        </div> <div class="card-2">
+            <div class="content d-flex justify-content-center align-items-center">
+                <span>Tidak mendapatkan code?</span>
+                <a href="#" class="text-decoration-none ms-3"> Kirim ulang dalam 01:30</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="y-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-label">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="psw"> New Password</label>
+                        <input type="password" class="form-control" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="psw">Confirm New Password</label>
+                        <input type="password" class="form-control" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                    </div>
+               @*     <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>*@
+                    <button type="submit" class="btn btn-primary" id="tombol" asp-controller="Login" asp-action="Index"  >Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="z-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-label">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">                  
+                   Masukkan Password Baru
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(event) {
+
+      function OTPInput() {
+    const inputs = document.querySelectorAll('#otp > *[id]');
+    for (let i = 0; i < inputs.length; i++) { inputs[i].addEventListener('keydown', function(event) { if (event.key==="Backspace" ) { inputs[i].value='' ; if (i !==0) inputs[i - 1].focus(); } else { if (i===inputs.length - 1 && inputs[i].value !=='' ) { return true; } else if (event.keyCode> 47 && event.keyCode < 58) { inputs[i].value=event.key; if (i !==inputs.length - 1) inputs[i + 1].focus(); event.preventDefault(); } else if (event.keyCode> 64 && event.keyCode < 91) { inputs[i].value=String.fromCharCode(event.keyCode); if (i !==inputs.length - 1) inputs[i + 1].focus(); event.preventDefault(); } } }); } } OTPInput();
+
+
+    });
+
+
+     $('#btn-cnfrm').click(function() {
+         $('.modal-title').html( 'Reset Password');
+         $('#y-modal').modal('show');
+    })
+
+
+     $('#tombol').click(function() {
+         $('.modal-title').html( 'Reset Password');
+         $('#z-modal').modal('show');
+    })
+
+
+    var myInput = document.getElementById("psw");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+
+// When the user clicks on the password field, show the message box
+myInput.onfocus = function() {
+  document.getElementById("message").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+  document.getElementById("message").style.display = "none";
+}
+
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+}
+
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+
+  // Validate length
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}
+
+</script>
+
+

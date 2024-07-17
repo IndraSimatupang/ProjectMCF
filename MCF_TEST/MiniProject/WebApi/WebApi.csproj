@@ -1,0 +1,168 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="Migrations\20220822065352_initDb.cs" />
+		<Compile Remove="Migrations\20220822065352_initDb.Designer.cs" />
+		<Compile Remove="Migrations\20220822072359_InitDb.cs" />
+		<Compile Remove="Migrations\20220822072359_InitDb.Designer.cs" />
+		<Compile Remove="Migrations\20220822073101_InitDb.cs" />
+		<Compile Remove="Migrations\20220822073101_InitDb.Designer.cs" />
+		<Compile Remove="Migrations\20220822073503_InitDb.cs" />
+		<Compile Remove="Migrations\20220822073503_InitDb.Designer.cs" />
+		<Compile Remove="Migrations\20220822074008_InitDb.cs" />
+		<Compile Remove="Migrations\20220822074008_InitDb.Designer.cs" />
+		<Compile Remove="Migrations\20220822074217_InitDb.cs" />
+		<Compile Remove="Migrations\20220822074217_InitDb.Designer.cs" />
+		<Compile Remove="Migrations\20220822075847_InitDb.cs" />
+		<Compile Remove="Migrations\20220822075847_InitDb.Designer.cs" />
+		<Compile Remove="Migrations\20220822080114_InitDb.cs" />
+		<Compile Remove="Migrations\20220822080114_InitDb.Designer.cs" />
+		<Compile Remove="Migrations\20220822082446_InitDb.cs" />
+		<Compile Remove="Migrations\20220822082446_InitDb.Designer.cs" />
+		<Compile Remove="Migrations\20220822083113_InitDb.cs" />
+		<Compile Remove="Migrations\20220822083113_InitDb.Designer.cs" />
+		<Compile Remove="Migrations\20220822083247_InitDb.cs" />
+		<Compile Remove="Migrations\20220822083247_InitDb.Designer.cs" />
+		<Compile Remove="Migrations\20220822083705_UpdateBaseProperties.cs" />
+		<Compile Remove="Migrations\20220822083705_UpdateBaseProperties.Designer.cs" />
+		<Compile Remove="Migrations\20220823040411_addAllDatabase.cs" />
+		<Compile Remove="Migrations\20220823040411_addAllDatabase.Designer.cs" />
+		<Compile Remove="Migrations\20220823040610_addAllDatabase.cs" />
+		<Compile Remove="Migrations\20220823040610_addAllDatabase.Designer.cs" />
+		<Compile Remove="Migrations\20220823040808_addAllDatabase.cs" />
+		<Compile Remove="Migrations\20220823040808_addAllDatabase.Designer.cs" />
+		<Compile Remove="Migrations\20220823040930_addAllDatabase.cs" />
+		<Compile Remove="Migrations\20220823040930_addAllDatabase.Designer.cs" />
+		<Compile Remove="Migrations\20220823041041_addAllDatabase.cs" />
+		<Compile Remove="Migrations\20220823041041_addAllDatabase.Designer.cs" />
+		<Compile Remove="Migrations\20220823041101_addAllDatabase.cs" />
+		<Compile Remove="Migrations\20220823041101_addAllDatabase.Designer.cs" />
+		<Compile Remove="Migrations\20220823041206_addAllDatabase.cs" />
+		<Compile Remove="Migrations\20220823041206_addAllDatabase.Designer.cs" />
+		<Compile Remove="Migrations\20220823041411_addAllDatabase.cs" />
+		<Compile Remove="Migrations\20220823041411_addAllDatabase.Designer.cs" />
+		<Compile Remove="Migrations\20220823041608_addAllDatabase.cs" />
+		<Compile Remove="Migrations\20220823041608_addAllDatabase.Designer.cs" />
+		<Compile Remove="Migrations\20220823041629_addAllTable.cs" />
+		<Compile Remove="Migrations\20220823041629_addAllTable.Designer.cs" />
+		<Compile Remove="Migrations\20220823042035_addAllTable.cs" />
+		<Compile Remove="Migrations\20220823042035_addAllTable.Designer.cs" />
+		<Compile Remove="Migrations\20220823042222_addAllTable.cs" />
+		<Compile Remove="Migrations\20220823042222_addAllTable.Designer.cs" />
+		<Compile Remove="Migrations\20220823042435_addAllTable.cs" />
+		<Compile Remove="Migrations\20220823042435_addAllTable.Designer.cs" />
+		<Compile Remove="Migrations\20220823042520_addAllTable.cs" />
+		<Compile Remove="Migrations\20220823042520_addAllTable.Designer.cs" />
+		<Compile Remove="Migrations\20220823042837_AddSeed.cs" />
+		<Compile Remove="Migrations\20220823042837_AddSeed.Designer.cs" />
+		<Compile Remove="Migrations\20220826025236_AlterTable_Menu_Location.cs" />
+		<Compile Remove="Migrations\20220826025236_AlterTable_Menu_Location.Designer.cs" />
+		<Compile Remove="Migrations\20220826033756_AddSeedLocationLevel.cs" />
+		<Compile Remove="Migrations\20220826033756_AddSeedLocationLevel.Designer.cs" />
+		<Compile Remove="Migrations\20220829023919_addmenu.cs" />
+		<Compile Remove="Migrations\20220829023919_addmenu.Designer.cs" />
+		<Compile Remove="Migrations\20220829071750_InitDb.cs" />
+		<Compile Remove="Migrations\20220829071750_InitDb.Designer.cs" />
+		<Compile Remove="Migrations\20220829074616_InitDb+Seed.cs" />
+		<Compile Remove="Migrations\20220829074616_InitDb+Seed.Designer.cs" />
+		<Compile Remove="Migrations\20220831023503_addNewSeed.cs" />
+		<Compile Remove="Migrations\20220831023503_addNewSeed.Designer.cs" />
+		<Compile Remove="Migrations\20220831031629_addNewSeed_fluent.cs" />
+		<Compile Remove="Migrations\20220831031629_addNewSeed_fluent.Designer.cs" />
+		<Compile Remove="Migrations\20220831031837_addNewSeed_fluent.cs" />
+		<Compile Remove="Migrations\20220831031837_addNewSeed_fluent.Designer.cs" />
+		<Compile Remove="Migrations\20220831033136_FKmenu.cs" />
+		<Compile Remove="Migrations\20220831033136_FKmenu.Designer.cs" />
+		<Compile Remove="Migrations\20220831050831_addNewSeed_allownullDoB.cs" />
+		<Compile Remove="Migrations\20220831050831_addNewSeed_allownullDoB.Designer.cs" />
+		<Compile Remove="Migrations\20220831051035_addNewSeed_allownullDoB.cs" />
+		<Compile Remove="Migrations\20220831051035_addNewSeed_allownullDoB.Designer.cs" />
+		<Compile Remove="Migrations\20220831063816_changeDataModels.cs" />
+		<Compile Remove="Migrations\20220831063816_changeDataModels.Designer.cs" />
+		<Compile Remove="Migrations\20220831110425_addSomeLocLev.cs" />
+		<Compile Remove="Migrations\20220831110425_addSomeLocLev.Designer.cs" />
+		<Compile Remove="Migrations\20220831110921_addSomeLocLev.cs" />
+		<Compile Remove="Migrations\20220831110921_addSomeLocLev.Designer.cs" />
+		<Compile Remove="Migrations\20220831111201_addSomeLocLev.cs" />
+		<Compile Remove="Migrations\20220831111201_addSomeLocLev.Designer.cs" />
+		<Compile Remove="Migrations\20220901020804_addMoreLocLev.cs" />
+		<Compile Remove="Migrations\20220901020804_addMoreLocLev.Designer.cs" />
+		<Compile Remove="Migrations\20220902015654_UpdateDatabaseFKandFluent.cs" />
+		<Compile Remove="Migrations\20220902015654_UpdateDatabaseFKandFluent.Designer.cs" />
+		<Compile Remove="Migrations\20220902020354_InitDb+Seed.cs" />
+		<Compile Remove="Migrations\20220902020354_InitDb+Seed.Designer.cs" />
+		<Compile Remove="Migrations\20220902020703_InitDb+Seed.cs" />
+		<Compile Remove="Migrations\20220902020703_InitDb+Seed.Designer.cs" />
+		<Compile Remove="Migrations\20220902024002_InitDb+Seed.cs" />
+		<Compile Remove="Migrations\20220902024002_InitDb+Seed.Designer.cs" />
+		<Compile Remove="Migrations\20220902025007_InitDb+Seed.cs" />
+		<Compile Remove="Migrations\20220902025007_InitDb+Seed.Designer.cs" />
+		<Compile Remove="Migrations\20220905101015_remove_unique.cs" />
+		<Compile Remove="Migrations\20220905101015_remove_unique.Designer.cs" />
+		<Compile Remove="Migrations\20220906065038_edit.cs" />
+		<Compile Remove="Migrations\20220906065038_edit.Designer.cs" />
+		<Compile Remove="Migrations\20220907023732_alterTable.cs" />
+		<Compile Remove="Migrations\20220907023732_alterTable.Designer.cs" />
+		<Compile Remove="Migrations\20220907024955_alterTable+Seed.cs" />
+		<Compile Remove="Migrations\20220907024955_alterTable+Seed.Designer.cs" />
+		<Compile Remove="Migrations\20220907025141_alterTable+Seed.cs" />
+		<Compile Remove="Migrations\20220907025141_alterTable+Seed.Designer.cs" />
+		<Compile Remove="Migrations\20220907030225_InitDb+Seed.cs" />
+		<Compile Remove="Migrations\20220907030225_InitDb+Seed.Designer.cs" />
+		<Compile Remove="Migrations\20220907032607_InitDb+Seed.cs" />
+		<Compile Remove="Migrations\20220907032607_InitDb+Seed.Designer.cs" />
+		<Compile Remove="Migrations\20220912034055_X.cs" />
+		<Compile Remove="Migrations\20220912034055_X.Designer.cs" />
+		<Compile Remove="Migrations\20220914042705_InitDb+Seed.cs" />
+		<Compile Remove="Migrations\20220914042705_InitDb+Seed.Designer.cs" />
+		<Compile Remove="Migrations\20220919045155_InitDb+Seed.cs" />
+		<Compile Remove="Migrations\20220919045155_InitDb+Seed.Designer.cs" />
+		<Compile Remove="Migrations\20220919072653_InitDb+Seed.cs" />
+		<Compile Remove="Migrations\20220919072653_InitDb+Seed.Designer.cs" />
+		<Compile Remove="Migrations\20220920084432_InitDb+Seed.cs" />
+		<Compile Remove="Migrations\20220920084432_InitDb+Seed.Designer.cs" />
+		<Compile Remove="Migrations\20220920084539_InitDb+Seed.cs" />
+		<Compile Remove="Migrations\20220920084539_InitDb+Seed.Designer.cs" />
+		<Compile Remove="Migrations\20220920085009_InitDb+Seed.cs" />
+		<Compile Remove="Migrations\20220920085009_InitDb+Seed.Designer.cs" />
+		<Compile Remove="Migrations\20220920085303_InitDb+Seed.cs" />
+		<Compile Remove="Migrations\20220920085303_InitDb+Seed.Designer.cs" />
+		<Compile Remove="Migrations\20220920085545_InitDb+Seed.cs" />
+		<Compile Remove="Migrations\20220920085545_InitDb+Seed.Designer.cs" />
+		<Compile Remove="Migrations\20220920085932_InitDb+Seed.cs" />
+		<Compile Remove="Migrations\20220920085932_InitDb+Seed.Designer.cs" />
+		<Compile Remove="Migrations\20220920090033_InitDb+Seed.cs" />
+		<Compile Remove="Migrations\20220920090033_InitDb+Seed.Designer.cs" />
+		<Compile Remove="Migrations\20220920090149_InitDb+Seed.cs" />
+		<Compile Remove="Migrations\20220920090149_InitDb+Seed.Designer.cs" />
+		<Compile Remove="Migrations\20220921025555_InitDb+Seed.cs" />
+		<Compile Remove="Migrations\20220921025555_InitDb+Seed.Designer.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Migrations\" />
+		<Folder Include="Security\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.27" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.27" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.27">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.27" />
+		<PackageReference Include="System.Net.Http" Version="4.3.4" />
+		<PackageReference Include="System.Net.Security" Version="4.3.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\ViewModel\ViewModel.csproj" />
+	</ItemGroup>
+
+
+</Project>

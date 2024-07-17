@@ -1,0 +1,155 @@
+﻿@model ViewModel.UserViewModel
+
+<div class="text-center">
+    <div>
+        <p>
+            <img src="~/dist/img/294_logo.png" alt="AdminLTE Logo" height="200" width="200" style="opacity: .8">
+
+        </p>
+        <p>
+            <img src="~/dist/img/mmk.png" alt="AdminLTE Logo" height="200" width="300" style="opacity: .8">
+        </p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <form asp-action="Login" method="post" id="form-login" name="form-login" asp-route-returnUrl="@ViewData["ReturnUrl"]">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="email" class="control-label">Email*</label>
+                        <input asp-for="email" class="form-control" />
+                        <span asp-validation-for="email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="password" class="control-label">Password*</label>
+                        <input asp-for="password" class="form-control" />
+                        <span asp-validation-for="password" class="text-danger"></span>
+                    </div>
+                    <p class="text-danger">@ViewData["ErrorMessage"]</p>
+                    <div class="form-group">
+                        <input type="submit" value="Login" class="btn btn-outline-primary" />
+                    </div>
+                    <div class="container">
+                        <a href="#" data-target="#pwdModal" data-toggle="modal">Lupa Password?</a>
+                    </div>
+                    <p>Belum memiliki akun?<a href="https://localhost:5002/Pendaftaran">  Daftar Disini</p></a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--modal-->
+<div id="pwdModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h1 class="text-center">Lupa Password</h1>
+            </div>
+            <p class="text-center">Masukkan Email anda kami akan melakukan pengecekan</p>
+            <div class="modal-body">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="text-center">
+                                <p>Email*</p>
+                                <div class="panel-body">
+                                    <fieldset>
+                                        <div class="form-group col-md-12">
+                                            <input class="form-control input-lg" id="inputemail" placeholder="example@mail.com" name="email" type="email">
+                                            <p></p>
+                                            <a id="formsent" class="btn btn-primary" href="">
+                                                Kirim OTP
+                                            </a>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="col-md-12 text-center">
+                    <button class="btn text-center btn danger" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--modal Register-->
+<div id="pwdModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h1 class="text-center">Lupa Password</h1>
+            </div>
+            <p class="text-center">Masukkan Email anda kami akan melakukan pengecekan</p>
+            <div class="modal-body">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="text-center">
+                                <p>Email*</p>
+                                <div class="panel-body">
+                                    <fieldset>
+                                        <div class="form-group col-md-12">
+                                            <input class="form-control input-lg" id="inputemail" placeholder="example@mail.com" name="email" type="email">
+                                            <p></p>
+                                            <a id="formsent" class="btn btn-primary" href="">
+                                                Kirim OTP
+                                            </a>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="col-md-12 text-center">
+                    <button class="btn text-center btn danger" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="x-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-label">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                    
+                    . . . .
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+    $('#formsent').click(function() {
+        if($('#inputemail').val() != ''){
+           $(this).attr('href','/login/sendotp?receipter='+$('#inputemail').val())
+        }
+         $('.modal-title').html( 'Mengirim OTP');
+         $('#x-modal').modal('show');
+    })
+</script>
+
+
+

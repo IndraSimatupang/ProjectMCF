@@ -1,0 +1,18 @@
+﻿@model IEnumerable<ViewModel.ListValue>
+
+<select id="sorting-list-ctrl" class="custom-select">
+    @foreach (var item in @Model)
+    {
+        <option id="@item.Value" value="@(item.Value=="Ascending" ? "true" : "false")">@item.Value</option>
+    }
+</select>
+
+<script>
+    $(document).ready(function(){
+        $('#sorting-list-ctrl').val(currentascen)
+    })
+
+    $('#sorting-list-ctrl').on('change', function(){
+        GetList(currentPage, rowsPerpage, currentSearch, currentcolumn, $(this).val());
+    })
+</script>
